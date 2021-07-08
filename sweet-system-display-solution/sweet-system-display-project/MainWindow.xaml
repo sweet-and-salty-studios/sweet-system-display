@@ -1,0 +1,35 @@
+﻿<Window x:Class="sweet_system_display_project.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:sweet_system_display_project"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TabControl>
+            <TabItem Header="General">
+                <Label Content="Content goes here..." />
+            </TabItem>
+            <TabItem Header="Hardware">
+                <Label Content="Content goes here..." />
+            </TabItem>
+            <TabItem Header="Programs">
+                <ItemsControl ItemsSource="{Binding Path=InstalledPrograms}" Grid.Row="1">
+
+                </ItemsControl>
+            </TabItem>
+        </TabControl>
+
+
+
+    </Grid>
+</Window>
